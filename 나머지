@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define _CRT_SEOURE_NO_WARINGS
+
+int main()
+{
+	int a, b;
+	scanf_s("%d %d",&a,&b);
+	printf("%d\n", a + b);
+	printf("%d\n", a - b);
+	printf("%d\n", a * b);
+	printf("%d\n", a / b);
+	printf("%d\n", a-((a/b)*b));
+}
+
+

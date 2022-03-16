@@ -1,0 +1,15 @@
+#include <stdio.h>
+*main()
+{
+
+	int n;
+	int i;
+
+	scanf_s("%d",&n);
+
+	for( i =1; i<=n; ++i) // 여기서 조건식에다가 i=n을 넣었어서 i가 n이 될때 까지 반복되어 무한루프가 됨
+	{
+		printf("%d\n",i);
+	}
+
+}

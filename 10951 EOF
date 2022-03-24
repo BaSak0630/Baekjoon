@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+    int a,b;
+    while(scanf("%d %d", &a, &b)!=EOF) {
+        printf("%d\n", a+b);
+    }
+}
+
+EOF는 end of file의 줄임말이다.
+주로 이것은 백준 문제를 풀 때
+최대 몇개의 입력이 들어오는지 모르는 문제에서 사용된다고 한다

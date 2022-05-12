@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <malloc.h>
+int getMaxPos(int p[], int n)
+{
+	int max;
+	int maxPos;
+	int i;
+
+	max = -1;
+	maxPos = -1;
+
+	for (i = 0; i < n; i++)
+	{
+		if (p[i] > max)
+		{
+			max = p[i];
+			maxPos = i;
+		}
+	}
+	return maxPos;
+}
+void swap(int* a, int* b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+void selectionSort(int p[], int n)
+{
+	int i;
+	int maxPos;
+
+	for (i = 0; i < 9; i++)
+	{
+		maxPos = getMaxPos(p, n -i);
+		swap(&p[maxPos], &p[n - 1 - i]);
+	}//sorting이라고 함 
+	//phase 단계(변해가는 과정을 한 단계를 phase라고 함)
+}
+
+
+int main()
+{
+	int* p;
+	int n,i;
+
+	scanf("%d",&n);
+
+
+	p = (int*)malloc(sizeof(int) * n);
+
+	for(i = 0; i < n; i++)
+	{
+		scanf("%d", &p[i]);
+	}
+
+	selectionSort(p, n);
+
+	for(i = 0; i < n; i++)
+	{
+		printf("%d\n", p[i]);
+	}
+
+
+
+
+
+
+
+
+
+	/*
+
+	int n,i,j;
+	int* p;
+	int max = -1;
+	int tmp= 0;
+
+
+	scanf("%d",&n);
+
+	p = (int*)malloc(sizeof(int) * n);
+	for(i = 0; i < n; i++)
+	{
+		scanf("%d", &p[i]);
+	}
+	for(j = 0; j < n; j++);
+	{
+	
+		max = -1;
+
+		for(i = 0; i <n; i++);
+		{
+			if(p[i] >= max)
+			{
+				max = p[i];
+				
+			}
+			else if(p[i] < max)
+			{
+				
+				tmp = p[i];
+				p[i] = ;
+				p[i-1] = tmp;
+			}
+		}
+	}
+	for(i = 0; i < n; i++)
+	{
+		printf("p[%d] = %d\n",i, p[i]);
+	}
+	*/
+	
+}
